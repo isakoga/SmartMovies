@@ -2,7 +2,7 @@ import React from 'react';
 import { CardContainer, CardImage, Container } from './style';
 
 const Cards = (data) => {
-  const { movies, value } = data;
+  const { movies, value, series } = data;
   if (value === "movie") {
     return (
       <Container>
@@ -23,7 +23,7 @@ const Cards = (data) => {
   } else {
     return (
       <Container>
-        {movies.map((serie) => (
+        {series.map((serie) => (
           <CardContainer>
             <CardImage>
               <img
