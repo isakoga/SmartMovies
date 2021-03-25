@@ -25,7 +25,7 @@ export const getSeries = async () => {
 export const getMovieById = async (id) => {
   const movie = await axios({
     url: `http://localhost:3000/filmes/${id}`,
-  }).then((res) => res.results)
+  }).then((res) => res)
     .catch(() => {
       console.error('OPS! Nenhum filme foi encontrado');
     });
@@ -35,8 +35,8 @@ export const getMovieById = async (id) => {
 
 export const getSerieById = async (id) => {
   const serie = await axios({
-    url: `http://localhost:3000/filmes/${id}`,
-  }).then((res) => res.results)
+    url: `http://localhost:3000/series/${id}`,
+  }).then((res) => res)
     .catch(() => {
       console.error('OPS! Nenhuma série foi encontrado');
     });

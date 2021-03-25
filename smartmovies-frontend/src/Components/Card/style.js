@@ -9,12 +9,21 @@ export const Container = styled.div`
   max-height: 500px;
 `
 
+export const DetailsButton = styled.button`
+  text-decoration: none;
+  
+`
+
 export const CardContainer = styled.div`
   border: 2px solid green;
   width: 20%;
   height: 40%;
   display: flex;
   flex-flow: column wrap;
+
+  >button {
+    text-decoration: none;
+  }
 `
 
 export const CardImage = styled.div`

@@ -5,17 +5,15 @@ import { NavBarContainer, Tab } from './style';
 const NavBar = () => {
   return (
     <NavBarContainer>
-      <Tab
-        href="/filmes"
-        value="movies"
-      >
-        Filmes
+      <Tab>
+        <a href="/filmes">
+          Filmes
+        </a>
       </Tab>
-      <Tab
-        href="/series"
-        value="series"
-      >
-        Séries
+      <Tab>
+        <a href="/series">
+          Séries
+        </a>
       </Tab>
     </NavBarContainer>
   );

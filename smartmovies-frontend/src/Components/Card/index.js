@@ -1,21 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CardContainer, CardImage, Container } from './style';
 
-const Cards = (data) => {
-  const { movies, value, series } = data;
+const Cards = ({ data, value }) => {
   if (value === "movie") {
     return (
       <Container>
-        {movies.map((movie) => (
+        { data && data.map((movie) => (
           <CardContainer>
-            <CardImage>
-              <img
-                src={ movie.poster_path }
-                alt={ movie.title }
-              />
-            </CardImage>
-            <span>{ movie.title }</span>
-            <p>{ movie.overview }</p>
+            <Link to={ `/filmes/${movie.id}` }>
+              <CardImage>
+                <img
+                  src={ movie.poster_path }
+                  alt={ movie.title }
+                />
+              </CardImage>
+              <span>{ movie.title }</span>
+              <p>{ movie.overview }</p>
+            </Link>
           </CardContainer>
         ))}
       </Container>
@@ -23,16 +25,18 @@ const Cards = (data) => {
   } else {
     return (
       <Container>
-        {series.map((serie) => (
+        {data && data.map((serie) => (
           <CardContainer>
-            <CardImage>
-              <img
-                src={ serie.poster_path}
-                alt={ serie.name}
-              />
-            </CardImage>
-            <span>{ serie.name }</span>
-            <p>{ serie.overview }</p>
+            <Link to={ `/series/${serie.id}` }>
+              <CardImage>
+                <img
+                  src={ serie.poster_path}
+                  alt={ serie.name}
+                />
+              </CardImage>
+              <span>{ serie.name }</span>
+              <p>{ serie.overview }</p>
+              </Link>
           </CardContainer>
         ))}
       </Container>

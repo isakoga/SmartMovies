@@ -2,17 +2,17 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './Pages/Home/Home';
-import Movies from './Pages/Movies/Movies';
-import Series from './Pages/Series/Series';
+import Details from './Pages/Details/Details';
+import Library from './Pages/Library/Library';
 
 function App() {
   return (
       <Switch>
         <Route exact path="/" component={ Home }/>
-        <Route path="/filmes" component={ Movies } />
-        <Route path="/filmes/:id" />
-        <Route path="/series" component={ Series } />
-        <Route path="/series/:id" />
+        <Route exact path="/filmes" component={ Library } />
+        <Route exact path="/filmes/:id" component={ Details }/>
+        <Route exact path="/series" component={ Library } />
+        <Route exact path="/series/:id" component={ Details } />
       </Switch>
   );
 }
