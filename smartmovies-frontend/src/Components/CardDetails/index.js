@@ -1,8 +1,19 @@
 import React from 'react';
-import { CastContainer, DetailsContainer, DetailsLeftContainer, DetailsRightContainer } from './style';
+import { CastCard, CastContainer, CoverContainer, DetailsContainer, DetailsLeftContainer, DetailsNavigation, DetailsRightContainer } from './style';
+
+// const renderCover = (info) => {
+//   const { backdrop_path, name } = info.data;
+//   return (
+//     <CoverContainer>
+//       <img src={ backdrop_path } alt={ name } />
+//     </CoverContainer>
+//   );
+// }
 
 const renderCard = (info, type) => {
   const { data } = info;
+  const cast = data.credits.cast.filter((cast) => cast.known_for_department === 'Acting').filter((_, index) => index < 21);
+
   if (type === 'filmes') {
     return (
       <DetailsContainer>
@@ -13,11 +24,25 @@ const renderCard = (info, type) => {
           />
         </DetailsLeftContainer>
         <DetailsRightContainer>
-          <h3>{ data.title }</h3>
+          <div>
+            <h2>{ data.title }</h2>
+            <h2>Nota: { data.vote_average }</h2>
+          </div>
+          <h4>Sinopse</h4>
           <h6>{ data.overview }</h6>
+          <h4>Elenco</h4>
           <CastContainer>
-
+          {cast.map((actor) => (
+            <CastCard>
+              <img src={ actor.profile_path } alt={ actor.name } />
+              <p>{ actor.name }</p>
+            </CastCard>
+          ))}
           </CastContainer>
+          <DetailsNavigation>
+            <a href={ data.homepage }>Ir para o filme</a>
+            <a href="/filmes">Voltar</a>
+          </DetailsNavigation>
         </DetailsRightContainer>
       </DetailsContainer>
     );
@@ -31,11 +56,25 @@ const renderCard = (info, type) => {
           />
         </DetailsLeftContainer>
         <DetailsRightContainer>
-          <h3>{ data.name }</h3>
-          <h6>{ data.overview }</h6>
+          <div>
+            <h2>{ data.name }</h2>
+            <h2>Nota: { data.vote_average }</h2>
+          </div>
+          <h4>Sinopse</h4>
+          <p>{ data.overview }</p>
+          <h4>Elenco</h4>
           <CastContainer>
-
+          {cast.map((actor) => (
+            <CastCard>
+              <img src={ actor.profile_path } alt={ actor.name } />
+              <p>{ actor.name }</p>
+            </CastCard>
+          ))}
           </CastContainer>
+          <DetailsNavigation>
+            <a href={ data.homepage }>Ir para a série</a>
+            <a href="/series">Voltar</a>
+          </DetailsNavigation>
         </DetailsRightContainer>
       </DetailsContainer>
     );

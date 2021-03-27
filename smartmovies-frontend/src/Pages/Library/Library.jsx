@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Cards from '../../Components/Card';
 import Header from '../../Components/Header';
 import Logo from '../../Components/Logo';
-import NavBar from '../../Components/NavBar';
 import { getMovies, getSeries } from '../../Service/API';
 import { HomeContainer } from '../Home/style';
 
@@ -31,7 +30,6 @@ const Movies = () => {
     <HomeContainer>
       <Logo />
       <Header />
-      <NavBar />
       { !library ? <p>loading</p> : <Cards data={ library } value={ value } /> }
     </HomeContainer>
   );
