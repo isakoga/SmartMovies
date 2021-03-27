@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const HeaderContainer = styled.div`
 ${({ theme }) => css`
   background-color: ${theme.body};
-  color: ${theme.colors.text};
+  color: ${theme.text};
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@ ${({ theme }) => css`
   justify-content: center;
   top: 0;
   width: 100%;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
 
   >h1 {
     text-align: center;
