@@ -20,9 +20,8 @@ export const DetailsLeftContainer = styled.div`
   width: 25%;
 
   >img {
-    width: 95%;
-    /* margin-top: 24px; */
-    height: 100%;
+    width: 100%;
+    /* height: 100%; */
   }
 `
 

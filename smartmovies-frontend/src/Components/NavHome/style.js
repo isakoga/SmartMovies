@@ -36,9 +36,12 @@ export const HomeLink = styled.div`
       font-family: 'BebasNeue';
       letter-spacing: 0.6px;
     }
-
+    
     &:hover {
-      box-shadow: 0px 5px 25px 0px ${theme.homeHover}
+      box-shadow: 0px 5px 25px 0px ${theme.homeHover};
+      background-color: 'rgb(203, 192, 211)';
+      transition: 0.3s;
+      color: 'rgb(0, 8, 20)';
     }
 
     @media (max-width: 600px) {

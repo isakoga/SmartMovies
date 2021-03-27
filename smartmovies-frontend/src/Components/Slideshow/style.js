@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SlideContainer = styled.div`
-  margin: 20px;
+  margin: 30px;
   overflow: hidden;
   max-width: 500px;
   width: 60%;
@@ -14,7 +14,7 @@ export const Slider = styled.div`
 
 export const Slide = styled.div`
   display: inline-block;
-  height: 250px;
+  height: 165px;
   width: 100%;
   border-radius: 20px;
 

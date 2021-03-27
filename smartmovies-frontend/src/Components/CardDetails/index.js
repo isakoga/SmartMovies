@@ -1,15 +1,6 @@
 import React from 'react';
 import { CastCard, CastContainer, DetailsContainer, DetailsLeftContainer, DetailsNavigation, DetailsRightContainer } from './style';
 
-// const renderCover = (info) => {
-//   const { backdrop_path, name } = info.data;
-//   return (
-//     <CoverContainer>
-//       <img src={ backdrop_path } alt={ name } />
-//     </CoverContainer>
-//   );
-// }
-
 const renderCard = (info, type) => {
   const { data } = info;
   const cast = data.credits.cast.filter((cast) => cast.known_for_department === 'Acting').filter((_, index) => index < 21);
