@@ -13,10 +13,11 @@ export const NavBarContainer = styled.div`
 
 export const HomeLink = styled.div`
   ${({ theme }) => css`
-    border: none;
+    border: 1px solid ${theme.border};
+    box-shadow: 1px ${theme.boxShadow};
     font-size: 1.5em;
     width: 25%;
-    margin: 60px;
+    margin: 30px;
     padding: 50px 40px;
     background-color: ${theme.body};
     border-radius: 16px;

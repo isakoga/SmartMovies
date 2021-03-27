@@ -11,6 +11,7 @@ ${({ theme }) => css`
   justify-content: center;
   top: 0;
   width: 100%;
+  transition: all 0.3s ease-in;
 
   >h1 {
     text-align: center;

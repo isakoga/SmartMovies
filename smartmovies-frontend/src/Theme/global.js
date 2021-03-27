@@ -33,6 +33,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'NotoSansJPMedium', sans-serif;
     background: ${({ theme }) => theme.body };
     color: ${({ theme }) => theme.colors.text };
-    transition: all 0.25s linear;
+    transition: all 0.3s ease-in;
   }
 `
