@@ -1,5 +1,5 @@
 import React from 'react';
-import { CastCard, CastContainer, CoverContainer, DetailsContainer, DetailsLeftContainer, DetailsNavigation, DetailsRightContainer } from './style';
+import { CastCard, CastContainer, DetailsContainer, DetailsLeftContainer, DetailsNavigation, DetailsRightContainer } from './style';
 
 // const renderCover = (info) => {
 //   const { backdrop_path, name } = info.data;

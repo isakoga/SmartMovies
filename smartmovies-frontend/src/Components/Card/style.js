@@ -6,58 +6,68 @@ export const Container = styled.div`
     justify-content: space-around;
     width: 80%;
     margin: 20px;
-    max-height: 600px;
     flex-wrap: wrap;
-    background-color: ${theme.colors.backgroundColor};
-    margin-bottom: 30px;
+    background-color: ${theme.body};
+    transition: all 0.3s ease-in-out;
   `}
 `
 
 export const CardContainer = styled.div`
-  width: 20%;
-  max-height: 450px;
-  display: inline-block;
-  flex-flow: column wrap;
-  margin: 10px;
-  overflow: hidden;
+  ${({ theme }) => css`
+    width: 20%;
+    max-height: 450px;
+    display: inline-block;
+    flex-flow: column wrap;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
 
-  h3 {
-    font-size: 1.2vw;
-    text-align: center;
-  }
+    h3 {
+      font-size: 1.2vw;
+      text-align: center;
 
-  p {
-    font-size: 0.75vw;
-  }
-
-  &:hover {
-    transition: all 0.2s ease-out;
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-    top: -4px;
-    background-color: white;
-  }
-
-  &:hover:before {
-    transform: scale(2.15);
-  }
-
-  >a {
-    text-decoration: none;
-    color: black;
-
-    >img {
-      flex: 1;
-      width: 100%;
+      @media (max-width: 700px) {
+        font-size: 1em;
+      }
     }
 
-    >div {
-      max-height: 150px;
-      height: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding: 5px;
+    p {
+      font-size: 0.75vw;
     }
-  }
+
+    &:hover {
+      box-shadow: 0px 5px 25px 0px ${theme.homeHover};
+      border-radius: 10px;
+    }
+
+    &:hover:before {
+      transform: scale(2.15);
+    }
+
+    >a {
+      text-decoration: none;
+      color: ${ theme.text };
+
+      >img {
+        flex: 1;
+        width: 100%;
+      }
+
+      >div {
+        max-height: 150px;
+        height: 15%;
+        padding: 5px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      width: 40%;
+    }
+
+    @media (max-width: 500px) {
+      width: 60%;
+    }
+  `}
 `
 
 export const CardImage = styled.div`

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Cards from '../../Components/Card';
 import Header from '../../Components/Header';
 import Logo from '../../Components/Logo';
+import Loader from '../../Components/Loading';
 import { getMovies, getSeries } from '../../Service/API';
 import { HomeContainer } from '../Home/style';
 
@@ -30,7 +31,7 @@ const Movies = () => {
     <HomeContainer>
       <Logo />
       <Header />
-      { !library ? <p>loading</p> : <Cards data={ library } value={ value } /> }
+      { !library ? <Loader /> : <Cards data={ library } value={ value } /> }
     </HomeContainer>
   );
 }
