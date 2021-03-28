@@ -1,5 +1,5 @@
 import React from 'react';
-import { CastCard, CastContainer, DetailsContainer, DetailsLeftContainer, DetailsNavigation, DetailsRightContainer } from './style';
+import { CastCard, CastContainer, Container, DetailsContainer, DetailsLeftContainer, DetailsNavigation, DetailsRightContainer } from './style';
 
 const renderCard = (info, type) => {
   const { data } = info;
@@ -52,7 +52,7 @@ const renderCard = (info, type) => {
             <h2>Nota: { data.vote_average }</h2>
           </div>
           <h4>Sinopse</h4>
-          <p>{ data.overview }</p>
+          <h6>{ data.overview }</h6>
           <h4>Elenco</h4>
           <CastContainer>
           {cast.map((actor) => (
@@ -74,8 +74,8 @@ const renderCard = (info, type) => {
 
 export default function DetailsCard({ info, value }) {
   return (
-    <div>
+    <Container>
       { info && renderCard(info, value) }
-    </div>
-  )
+    </Container>
+  );
 }

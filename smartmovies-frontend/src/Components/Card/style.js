@@ -19,8 +19,10 @@ export const CardContainer = styled.div`
     display: inline-block;
     flex-flow: column wrap;
     margin: 10px;
+    border: 1px solid ${ theme.border };
     border-radius: 10px;
     overflow: hidden;
+    align-items: center;
 
     h3 {
       font-size: 1.2vw;
@@ -29,10 +31,6 @@ export const CardContainer = styled.div`
       @media (max-width: 700px) {
         font-size: 1em;
       }
-    }
-
-    p {
-      font-size: 0.75vw;
     }
 
     &:hover {
@@ -57,6 +55,9 @@ export const CardContainer = styled.div`
         max-height: 150px;
         height: 15%;
         padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 

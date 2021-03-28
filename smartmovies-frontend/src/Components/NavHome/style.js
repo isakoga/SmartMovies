@@ -1,4 +1,4 @@
-  import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const NavBarContainer = styled.div`
   justify-content: center;
@@ -13,21 +13,28 @@ export const NavBarContainer = styled.div`
 
 export const HomeLink = styled.div`
   ${({ theme }) => css`
+    background-color: ${ theme.body };
     border: 1px solid ${ theme.border };
+    border-radius: 16px;
     box-shadow: 1px ${ theme.boxShadow };
+    color: ${ theme.text };
     font-size: 2em;
-    width: 25%;
     margin: 30px;
     padding: 50px 40px;
-    background-color: ${ theme.body };
-    border-radius: 16px;
-
     text-align: center;
     text-decoration: none;
-    color: ${ theme.text };
+    transition: box-shadow 0.3s ease-in-out;
+    width: 25%;
+
     cursor: default;
 
-    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      background-color: ${theme.homeHoverBackground};
+      box-shadow: 0px 5px 25px 0px ${theme.homeHover};
+      transition: 0.3s ease-in-out;
+      color: ${theme.homeHoverText};
+    }
 
     >a {
       color: ${ theme.text };
@@ -35,13 +42,11 @@ export const HomeLink = styled.div`
       cursor: pointer;
       font-family: 'BebasNeue';
       letter-spacing: 0.6px;
-    }
-    
-    &:hover {
-      box-shadow: 0px 5px 25px 0px ${theme.homeHover};
-      background-color: 'rgb(203, 192, 211)';
-      transition: 0.3s;
-      color: 'rgb(0, 8, 20)';
+
+      &:hover {
+        transition: 0.3s ease-in-out;
+        color: ${theme.homeHoverText};
+      }
     }
 
     @media (max-width: 600px) {

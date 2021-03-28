@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const SlideContainer = styled.div`
-  margin: 30px;
   overflow: hidden;
-  max-width: 500px;
+  max-width: 600px;
   width: 60%;
 `
 
@@ -14,12 +13,16 @@ export const Slider = styled.div`
 
 export const Slide = styled.div`
   display: inline-block;
-  height: 165px;
+  height: 250px;
   width: 100%;
   border-radius: 20px;
 
   >img {
     width: 100%;
     border-radius: 20px;
+  }
+
+  @media (max-width: 600px) {
+    height: 175px;
   }
 `

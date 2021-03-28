@@ -32,7 +32,7 @@ const Cards = ({ data, value }) => {
                   alt={ serie.name }
                 />
                 <div>
-                  <span>{ serie.name }</span>
+                  <h3>{ serie.name }</h3>
                 </div>
               </Link>
           </CardContainer>
