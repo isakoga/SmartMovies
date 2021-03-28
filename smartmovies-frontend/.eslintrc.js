@@ -8,6 +8,7 @@ module.exports = {
     'airbnb',
     'prettier',
     'prettier/react',
+    'eslint-config-prettier',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -19,6 +20,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'eslint-plugin-prettier',
   ],
   rules: {
     'prettier/prettier': 'error',
