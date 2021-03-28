@@ -37,7 +37,7 @@ Após a seleção abrirá um catálogo com vários cards, clicando no card o usu
 ## Tecnologias
 Tecnologias utilizadas para construção da aplicação:  
 * Node
-* React com a biblioteca styled-components
+* React
 
 Ferramentas para controle e organização de código:
 * ESLint
