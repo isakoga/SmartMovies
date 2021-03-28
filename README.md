@@ -2,10 +2,10 @@
 ### Catálogo de filmes e séries  
 
 ## Tabela de conteúdos
-* [Sobre] (https://github.com/isakoga/SmartMovies#Sobre)
-* [Instalação] (https://github.com/isakoga/SmartMovies#Instalação)
-* [Como-usar] (https://github.com/isakoga/SmartMovies#Como-usar)
-* [Tecnologias] (https://github.com/isakoga/SmartMovies#Tecnologias)
+* [Sobre](https://github.com/isakoga/SmartMovies#Sobre)
+* [Instalação](https://github.com/isakoga/SmartMovies#Instalação)
+* [Como-usar](https://github.com/isakoga/SmartMovies#Como-usar)
+* [Tecnologias](https://github.com/isakoga/SmartMovies#Tecnologias)
 
 ## Sobre
 Aplicação que mostra um catálogo de filmes e séries com informações detalhadas e redirecionamento para a página do filme/série escolhido.
