@@ -5,16 +5,16 @@ import { NavBarContainer, HomeLink } from './style';
 const NavBar = () => {
   return (
     <NavBarContainer>
-      <a href="/filmes">
-        <HomeLink>
+      <HomeLink>
+        <a href="/filmes">
           Filmes
-        </HomeLink>
-      </a>
-      <a href="/series">
-        <HomeLink>
+        </a>
+      </HomeLink>
+      <HomeLink>
+        <a href="/series">
           Séries
-        </HomeLink>
-      </a>
+        </a>
+      </HomeLink>
     </NavBarContainer>
   );
 }

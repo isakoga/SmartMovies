@@ -11,7 +11,7 @@ export const NavBarContainer = styled.div`
   }
 `
 
-export const HomeLink = styled.div`
+export const HomeLink = styled.button`
   ${({ theme }) => css`
     background-color: ${ theme.body };
     border: 1px solid ${ theme.border };
@@ -19,7 +19,7 @@ export const HomeLink = styled.div`
     box-shadow: 1px ${ theme.boxShadow };
     color: ${ theme.text };
     font-size: 2em;
-    margin: 30px;
+    margin: 40px 30px;
     padding: 50px 40px;
     text-align: center;
     text-decoration: none;
@@ -28,12 +28,16 @@ export const HomeLink = styled.div`
 
     cursor: default;
 
-
     &:hover {
       background-color: ${theme.homeHoverBackground};
       box-shadow: 0px 5px 25px 0px ${theme.homeHover};
       transition: 0.3s ease-in-out;
       color: ${theme.homeHoverText};
+
+      >a {
+        transition: 0.3s ease-in-out;
+        color: ${theme.homeHoverText};
+      }
     }
 
     >a {
@@ -42,14 +46,10 @@ export const HomeLink = styled.div`
       cursor: pointer;
       font-family: 'BebasNeue';
       letter-spacing: 0.6px;
-
-      &:hover {
-        transition: 0.3s ease-in-out;
-        color: ${theme.homeHoverText};
-      }
     }
 
     @media (max-width: 600px) {
+      align-items: center;
       justify-content: center;
       flex-flow: column wrap;
       width: 62%;
