@@ -16,21 +16,25 @@ Certifique-se de ter instalado em sua maquina estas ferramentas: Git, Node.js, e
 
 #### Rodando a aplicação localmente
 1. Clone o repositório
-* ``` git clone https://github.com/mpessini/gitsearch.git ```
+* ``` git clone https://github.com/isakoga/SmartMovies.git ```
 2. Entre na pasta do repositório que você acabou de clonar:
-* ``` cd gitsearch ```
+* ``` cd SmartMovies ```
 3. Instale as dependências:
 * ``` npm install ```
 4. Inicialize o projeto:
-* ``` npm start ``` (uma nova página deve abrir no seu navegador)
+* Inicie o projeto ``` npm start ```
+O projeto irá inciar o backend na porta 3000 e em seguida o frontend.    
+Por padrão o React procura rodar as aplicações na porta 3000, como o backend já estará rodando nesta porta, ele perguntará se queres rodar a aplicação em outra porta, responda com ``` Y ```.  
+Uma página no browser será aberta com a aplicação.  
+Divirta-se!!
 
-#### Como Usar
+## Como Usar
 
 Ao iniciar a aplicação o usuário poderá escolher entre filmes ou séries.
 
 Após a seleção abrirá um catálogo com vários cards, clicando no card o usuário pode ter mais informações (Sinopse, nota IMDB, elenco, link de redirecionamento) sobre o filme/série escolhido.
 
-#### Tecnologias
+## Tecnologias
 Tecnologias utilizadas para construção da aplicação:  
 * Node
 * React com a biblioteca styled-components

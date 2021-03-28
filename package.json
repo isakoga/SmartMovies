@@ -1,0 +1,12 @@
+{
+  "name": "smartmovies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run install-back && npm run install-front && npm run start-back && npm run start-front",
+    "install-back": "npm --prefix smartmovies-backend/ install",
+    "start-back": "npm --prefix smartmovies-backend run start&",
+    "install-front": "npm --prefix smartmovies-frontend install",
+    "start-front": "npm --prefix smartmovies-frontend run start&"
+  }
+}
