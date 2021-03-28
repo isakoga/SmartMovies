@@ -22,8 +22,8 @@ Certifique-se de ter instalado em sua maquina estas ferramentas: Git, Node.js, e
 3. Instale as dependências:
 * ``` npm install ```
 4. Inicialize o projeto:
-* Inicie o projeto ``` npm start ```
-O projeto irá inciar o backend na porta 3000 e em seguida o frontend.    
+* Inicie o projeto com ``` npm start ```  
+O projeto irá inciar o backend na porta 3000 e em seguida o frontend.  
 Por padrão o React procura rodar as aplicações na porta 3000, como o backend já estará rodando nesta porta, ele perguntará se queres rodar a aplicação em outra porta, responda com ``` Y ```.  
 Uma página no browser será aberta com a aplicação.  
 Divirta-se!!
