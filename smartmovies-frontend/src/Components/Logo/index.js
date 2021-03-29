@@ -10,11 +10,29 @@ const handleChange = (check, setCheck, toggleTheme) => {
   toggleTheme();
 };
 
+const renderLink = () => {
+  const { pathname } = window.location;
+  if (pathname === '/filmes') {
+    return (
+      <a href='/series' style={{marginLeft: 0}}>
+        Séries
+      </a>
+    )
+  } else {
+    return (
+      <a href='/filmes' style={{marginLeft: 0}}>
+        Filmes
+      </a>
+    )
+  };
+}
+
 export default function Logo() {
   const [check, setCheck] = useState(false);
 
   const { theme, toggleTheme } = useTheme();
   const iconStyle = { color: 'white' };
+  const { pathname } = window.location;
 
   useEffect(() => {
     if (theme && theme.title === 'light') {
@@ -27,6 +45,7 @@ export default function Logo() {
   return (
     <HeaderLogo>
       <a href='/'>Smart Movies</a>
+      {pathname === '/filmes' || pathname === '/series' ? renderLink() : null}
       <ContainerToggle>
         <FiSun style={iconStyle} />
         <Toggle
