@@ -9,7 +9,7 @@ const Cards = ({ data, value }) => {
       <Container>
         {data &&
           data.map((movie) => (
-            <CardContainer>
+            <CardContainer key={movie.id}>
               <Link to={`/filmes/${movie.id}`}>
                 <img src={movie.poster_path} alt={movie.title} />
                 <div>
@@ -25,7 +25,7 @@ const Cards = ({ data, value }) => {
     <Container>
       {data &&
         data.map((serie) => (
-          <CardContainer>
+          <CardContainer key={serie.id}>
             <Link to={`/series/${serie.id}`}>
               <img src={serie.poster_path} alt={serie.name} />
               <div>
@@ -43,10 +43,11 @@ export default Cards;
 Cards.defaultProps = {
   value: '',
   data: [],
+  map: () => {},
 };
 
 Cards.propTypes = {
   value: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.object),
-  map: PropTypes.func.isRequired,
+  map: PropTypes.func,
 };

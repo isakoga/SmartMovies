@@ -27,6 +27,9 @@ export const CardContainer = styled.div`
     h3 {
       font-size: 1.2vw;
       text-align: center;
+      margin: 0;
+      font-family: 'BebasNeue', cursive;
+      letter-spacing: 0.6px;
 
       @media (max-width: 700px) {
         font-size: 1em;
@@ -43,6 +46,10 @@ export const CardContainer = styled.div`
     }
 
     > a {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: space-around;
       text-decoration: none;
       color: ${theme.text};
 
@@ -52,9 +59,9 @@ export const CardContainer = styled.div`
       }
 
       > div {
-        max-height: 150px;
+        max-height: 25px;
         height: 15%;
-        padding: 5px;
+        padding: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
