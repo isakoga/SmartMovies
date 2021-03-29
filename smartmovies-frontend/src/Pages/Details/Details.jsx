@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react';
 import DetailsCard from '../../Components/CardDetails';
 import Logo from '../../Components/Logo';
 import { getMovieById, getSerieById } from '../../Service/API';
-import { DetailsGlobalContainer } from './style';
+import DetailsGlobalContainer from './style';
 
 const verifyURL = async (setDetails, setValue) => {
   const { pathname } = window.location;
-  const [first, path, id] = pathname.split('/');
-  if (path === 'filmes') {
-    const movie = await getMovieById(id);
+  const splitPath = pathname.split('/');
+  if (splitPath[1] === 'filmes') {
+    const movie = await getMovieById(splitPath[2]);
     setDetails(movie);
-    setValue(path);
+    setValue(splitPath[1]);
   } else {
-    const serie = await getSerieById(id);
+    const serie = await getSerieById(splitPath[2]);
     setDetails(serie);
-    setValue(path);
+    setValue(splitPath[1]);
   }
-}
+};
 
 const MovieDetails = () => {
   const [details, setDetails] = useState();
@@ -24,14 +24,14 @@ const MovieDetails = () => {
 
   useEffect(() => {
     verifyURL(setDetails, setValue);
-  },[details]);
+  }, [details]);
 
   return (
     <DetailsGlobalContainer>
       <Logo />
-      <DetailsCard info={ details } value={ value } />
+      <DetailsCard info={details} value={value} />
     </DetailsGlobalContainer>
   );
-}
+};
 
 export default MovieDetails;

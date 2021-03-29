@@ -2,15 +2,15 @@ import styled, { css } from 'styled-components';
 
 export const LoadingContainer = styled.div`
   ${({ theme }) => css`
-    background-color: ${ theme.body };
+    background-color: ${theme.body};
   `}
   width: 100%;
   height: 200px;
-`
+`;
 
 export const Loading = styled.div`
   ${({ theme }) => css`
-    color: ${ theme.text };
+    color: ${theme.text};
     display: block;
     position: relative;
     left: 50%;
@@ -20,12 +20,12 @@ export const Loading = styled.div`
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #9370DB;
+    border-top-color: #9370db;
     -webkit-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
 
     &:::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 5px;
       left: 5px;
@@ -33,13 +33,13 @@ export const Loading = styled.div`
       bottom: 5px;
       border-radius: 50%;
       border: 3px solid transparent;
-      border-top-color: #BA55D3;
+      border-top-color: #ba55d3;
       -webkit-animation: spin 1s linear infinite;
       animation: spin 1s linear infinite;
     }
 
     &:::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 15px;
       left: 15px;
@@ -47,34 +47,34 @@ export const Loading = styled.div`
       bottom: 15px;
       border-radius: 50%;
       border: 3px solid transparent;
-      border-top-color: #FF00FF;
+      border-top-color: #ff00ff;
       -webkit-animation: spin 1s linear infinite;
       animation: spin 1s linear infinite;
     }
 
     @-webkit-keyframes spin {
-      0%   {
-          -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
       }
       100% {
-          -webkit-transform: rotate(360deg);
-          -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
       }
     }
     @keyframes spin {
-        0%   {
-            -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-        100% {
-            -webkit-transform: rotate(360deg);
-            -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
     }
   `}
-`
+`;

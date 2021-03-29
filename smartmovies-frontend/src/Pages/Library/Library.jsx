@@ -4,7 +4,7 @@ import Header from '../../Components/Header';
 import Logo from '../../Components/Logo';
 import Loader from '../../Components/Loading';
 import { getMovies, getSeries } from '../../Service/API';
-import { HomeContainer } from '../Home/style';
+import HomeContainer from '../Home/style';
 
 const verifyURL = async (setLibrary, setValue) => {
   const { pathname } = window.location;
@@ -17,7 +17,7 @@ const verifyURL = async (setLibrary, setValue) => {
     setLibrary(series);
     setValue('serie');
   }
-}
+};
 
 const Movies = () => {
   const [library, setLibrary] = useState();
@@ -31,9 +31,9 @@ const Movies = () => {
     <HomeContainer>
       <Logo />
       <Header />
-      { !library ? <Loader /> : <Cards data={ library } value={ value } /> }
+      {!library ? <Loader /> : <Cards data={library} value={value} />}
     </HomeContainer>
   );
-}
+};
 
 export default Movies;

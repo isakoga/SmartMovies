@@ -5,7 +5,7 @@ import NotoSansJPMedium from './Fonts/NotoSansJP-Medium.otf';
 import NotoSansJPBold from './Fonts/NotoSansJP-Bold.otf';
 import NotoSansJPBlack from './Fonts/NotoSansJP-Black.otf';
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
   @font-face {
@@ -31,8 +31,10 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'NotoSansJPMedium', sans-serif;
-    background: ${({ theme }) => theme.body };
-    color: ${({ theme }) => theme.text };
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
     transition: all 0.3s ease-in-out;
   }
-`
+`;
+
+export default GlobalStyles;

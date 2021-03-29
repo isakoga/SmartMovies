@@ -43,9 +43,9 @@ export default function Slideshow() {
   return (
     <SlideContainer>
       <Slider style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-        {photos.map((photo, index) => (
-          <Slide key={ index }>
-            <img src={ photo } alt="slide" />
+        {photos.map((photo) => (
+          <Slide>
+            <img src={photo} alt='slide' />
           </Slide>
         ))}
       </Slider>

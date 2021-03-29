@@ -3,19 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Container, ToggleLabel, ToggleSwitch } from './styles';
 
-const Toggle = ({
-  labelLeft,
-  labelRight,
-  checked,
-  onChange,
-}) => (
+const Toggle = ({ labelLeft, labelRight, checked, onChange }) => (
   <Container>
     <ToggleLabel>{labelLeft}</ToggleLabel>
     <ToggleSwitch
-      checked={ checked }
-      uncheckedIcon={ false }
-      checkedIcon={ false }
-      onChange={ onChange }
+      checked={checked}
+      uncheckedIcon={false}
+      checkedIcon={false}
+      onChange={onChange}
     />
     <ToggleLabel>{labelRight}</ToggleLabel>
   </Container>

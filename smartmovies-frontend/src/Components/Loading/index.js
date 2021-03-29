@@ -6,5 +6,5 @@ export default function Loader() {
     <LoadingContainer>
       <Loading />
     </LoadingContainer>
-  )
+  );
 }

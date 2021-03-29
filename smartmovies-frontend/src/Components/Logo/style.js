@@ -9,7 +9,7 @@ export const HeaderLogo = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    >a {
+    > a {
       text-decoration: none;
       color: white;
       font-size: 20px;
@@ -19,16 +19,12 @@ export const HeaderLogo = styled.div`
       margin-left: 15px;
     }
   `}
-`
+`;
 
 export const ContainerToggle = styled.div`
-  ${({ theme }) => css`
-  
-    display: flex;
-    align-items: center;
-    width: 70px;
-    justify-content: space-around;
-    margin-right: 10px;
-  `}
-
+  display: flex;
+  align-items: center;
+  width: 70px;
+  justify-content: space-around;
+  margin-right: 10px;
 `;

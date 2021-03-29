@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
 
 export const DetailsContainer = styled.div`
   ${({ theme }) => css`
@@ -12,12 +12,12 @@ export const DetailsContainer = styled.div`
     margin: 80px;
     width: 80%;
     justify-content: space-between;
-    border: 1px solid ${ theme.border };
+    border: 1px solid ${theme.border};
     border-radius: 16px;
     padding: 20px;
-    box-shadow: 0px 5px 25px 0px ${theme.boxShadow}; 
+    box-shadow: 0px 5px 25px 0px ${theme.boxShadow};
   `}
-  
+
   @media (max-width: 1025px) {
     align-items: center;
     flex-flow: column wrap;
@@ -25,12 +25,12 @@ export const DetailsContainer = styled.div`
     padding: 0;
     margin-top: 30px;
   }
-`
+`;
 
 export const DetailsLeftContainer = styled.div`
   width: 25%;
 
-  >img {
+  > img {
     min-width: 200px;
     width: 100%;
     margin: 8px 0;
@@ -50,14 +50,14 @@ export const DetailsLeftContainer = styled.div`
     width: 80%;
     margin: 15px 0;
   }
-`
+`;
 
 export const DetailsRightContainer = styled.div`
   width: 70%;
   display: flex;
   flex-flow: column wrap;
 
-  >div {
+  > div {
     display: flex;
     justify-content: space-between;
   }
@@ -76,14 +76,14 @@ export const DetailsRightContainer = styled.div`
     font-size: 0.8em;
     margin: 8px 0;
   }
-`
+`;
 
 export const CastContainer = styled.div`
   display: flex;
   width: 100%;
   overflow-x: scroll;
   max-height: 240px;
-`
+`;
 
 export const CastCard = styled.div`
   width: 100%;
@@ -92,15 +92,15 @@ export const CastCard = styled.div`
   margin: 10px 10px 0 10px;
   max-height: 180px;
 
-  >img {
+  > img {
     width: 100px;
   }
 
-  >p {
+  > p {
     font-size: 12px;
     margin-bottom: 5px;
   }
-`
+`;
 
 export const DetailsNavigation = styled.div`
   ${({ theme }) => css`
@@ -108,14 +108,14 @@ export const DetailsNavigation = styled.div`
     display: flex;
     justify-content: space-between;
 
-    >a {
+    > a {
       text-decoration: none;
       padding: 20px;
-      border: 1px solid ${ theme.border };
+      border: 1px solid ${theme.border};
       border-radius: 16px;
       margin: 10px;
-      background-color: ${ theme.buttonDetailsBackground };
-      color: ${ theme.buttonDetailsText };
+      background-color: ${theme.buttonDetailsBackground};
+      color: ${theme.buttonDetailsText};
 
       &:hover {
         box-shadow: 0px 5px 25px 0px ${theme.homeHover};
@@ -127,4 +127,4 @@ export const DetailsNavigation = styled.div`
       font-size: 0.75em;
     }
   `}
-`
+`;

@@ -9,15 +9,15 @@ export const NavBarContainer = styled.div`
     flex-flow: column wrap;
     align-items: center;
   }
-`
+`;
 
 export const HomeLink = styled.button`
   ${({ theme }) => css`
-    background-color: ${ theme.body };
-    border: 1px solid ${ theme.border };
+    background-color: ${theme.body};
+    border: 1px solid ${theme.border};
     border-radius: 16px;
-    box-shadow: 1px ${ theme.boxShadow };
-    color: ${ theme.text };
+    box-shadow: 1px ${theme.boxShadow};
+    color: ${theme.text};
     font-size: 2em;
     margin: 40px 30px;
     padding: 50px 40px;
@@ -34,14 +34,14 @@ export const HomeLink = styled.button`
       transition: 0.3s ease-in-out;
       color: ${theme.homeHoverText};
 
-      >a {
+      > a {
         transition: 0.3s ease-in-out;
         color: ${theme.homeHoverText};
       }
     }
 
-    >a {
-      color: ${ theme.text };
+    > a {
+      color: ${theme.text};
       text-decoration: none;
       cursor: pointer;
       font-family: 'BebasNeue';
@@ -55,4 +55,4 @@ export const HomeLink = styled.button`
       width: 62%;
     }
   `}
-`
+`;

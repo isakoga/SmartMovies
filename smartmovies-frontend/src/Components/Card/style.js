@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  ${({ theme }) => css` 
+  ${({ theme }) => css`
     display: flex;
     justify-content: space-around;
     width: 80%;
@@ -10,7 +10,7 @@ export const Container = styled.div`
     background-color: ${theme.body};
     transition: all 0.3s ease-in-out;
   `}
-`
+`;
 
 export const CardContainer = styled.div`
   ${({ theme }) => css`
@@ -19,7 +19,7 @@ export const CardContainer = styled.div`
     display: inline-block;
     flex-flow: column wrap;
     margin: 10px;
-    border: 1px solid ${ theme.border };
+    border: 1px solid ${theme.border};
     border-radius: 10px;
     overflow: hidden;
     align-items: center;
@@ -42,16 +42,16 @@ export const CardContainer = styled.div`
       transform: scale(2.15);
     }
 
-    >a {
+    > a {
       text-decoration: none;
-      color: ${ theme.text };
+      color: ${theme.text};
 
-      >img {
+      > img {
         flex: 1;
         width: 100%;
       }
 
-      >div {
+      > div {
         max-height: 150px;
         height: 15%;
         padding: 5px;
@@ -69,12 +69,12 @@ export const CardContainer = styled.div`
       width: 60%;
     }
   `}
-`
+`;
 
 export const CardImage = styled.div`
   flex: 1;
 
-  >img {
+  > img {
     width: 100%;
   }
-`
+`;

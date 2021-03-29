@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HomeContainer = styled.div`
+const HomeContainer = styled.div`
   align-items: center;
   display: flex;
   flex-flow: row wrap;
@@ -14,3 +14,5 @@ export const HomeContainer = styled.div`
     flex-flow: column wrap;
   }
 `;
+
+export default HomeContainer;

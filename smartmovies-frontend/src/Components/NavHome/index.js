@@ -2,21 +2,15 @@ import React from 'react';
 
 import { NavBarContainer, HomeLink } from './style';
 
-const NavBar = () => {
-  return (
-    <NavBarContainer>
-      <HomeLink>
-        <a href="/filmes">
-          Filmes
-        </a>
-      </HomeLink>
-      <HomeLink>
-        <a href="/series">
-          Séries
-        </a>
-      </HomeLink>
-    </NavBarContainer>
-  );
-}
+const NavBar = () => (
+  <NavBarContainer>
+    <HomeLink>
+      <a href='/filmes'>Filmes</a>
+    </HomeLink>
+    <HomeLink>
+      <a href='/series'>Séries</a>
+    </HomeLink>
+  </NavBarContainer>
+);
 
 export default NavBar;

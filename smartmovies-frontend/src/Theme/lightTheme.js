@@ -7,11 +7,9 @@ export default {
   title: 'light',
   text: 'rgb(0, 8, 20)',
   toggleBorder: '#FFF',
-
   homeHover: 'rgb(60, 9, 108)',
   homeHoverBackground: 'rgb(72, 6, 116)',
   homeHoverText: 'rgb(229, 229, 229)',
-
   buttonDetailsBackground: 'rgb(36, 0, 70)',
   buttonDetailsText: 'rgb(229, 229, 229)',
-}
+};

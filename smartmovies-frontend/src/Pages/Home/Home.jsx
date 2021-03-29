@@ -4,17 +4,15 @@ import Logo from '../../Components/Logo';
 import Slideshow from '../../Components/Slideshow';
 import NavBar from '../../Components/NavHome';
 
-import { HomeContainer } from './style';
+import HomeContainer from './style';
 
-const HomePage = () => {
-  return (
-    <HomeContainer>
-      <Logo />
-      <Header />
-      <Slideshow />
-      <NavBar />
-    </HomeContainer>
-  )
-}
+const HomePage = () => (
+  <HomeContainer>
+    <Logo />
+    <Header />
+    <Slideshow />
+    <NavBar />
+  </HomeContainer>
+);
 
 export default HomePage;

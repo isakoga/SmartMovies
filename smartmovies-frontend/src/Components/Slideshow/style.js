@@ -4,12 +4,12 @@ export const SlideContainer = styled.div`
   overflow: hidden;
   max-width: 600px;
   width: 60%;
-`
+`;
 
 export const Slider = styled.div`
   white-space: nowrap;
   transition: ease 1000ms;
-`
+`;
 
 export const Slide = styled.div`
   display: inline-block;
@@ -17,7 +17,7 @@ export const Slide = styled.div`
   width: 100%;
   border-radius: 20px;
 
-  >img {
+  > img {
     width: 100%;
     border-radius: 20px;
   }
@@ -25,4 +25,4 @@ export const Slide = styled.div`
   @media (max-width: 600px) {
     height: 175px;
   }
-`
+`;
