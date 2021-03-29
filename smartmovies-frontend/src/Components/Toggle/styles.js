@@ -14,5 +14,5 @@ export const ToggleSwitch = styled(Switch).attrs(
     ({
       width: 30,
       height: 15,
-    }``)
-);
+    })
+)``;

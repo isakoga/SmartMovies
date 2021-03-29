@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SlideContainer = styled.div`
   overflow: hidden;
-  max-width: 600px;
+  max-width: 500px;
   width: 60%;
 `;
 
